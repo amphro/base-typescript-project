@@ -1,0 +1,36 @@
+{
+    "name": "base-typescript-project",
+    "version": "1.0.0",
+    "description": "A starting point for new typescript projects.",
+    "main": "dist/server.js",
+    "scripts": {
+        "test": "mocha dist/test/**/*",
+        "compile": "./node_modules/tslint/bin/tslint -p . -c tslint.json 'src/**/*.ts' && tsc",
+        "precommit": "npm run compile && lint-staged"
+    },
+    "lint-staged": {
+        "**/*.{ts,js,css,md}": [
+            "prettier --write",
+            "git add"
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/amphro/base-typescript-project.git"
+    },
+    "author": "Thomas Dvornik",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/amphro/base-typescript-project/issues"
+    },
+    "homepage": "https://github.com/amphro/base-typescript-project#readme",
+    "devDependencies": {
+        "@salesforce/dev-config": "1.1.0",
+        "@types/node": "8.10.11",
+        "husky": "0.14.3",
+        "lint-staged": "7.0.5",
+        "prettier": "1.12.1",
+        "tslint": "5.9.1",
+        "typescript": "2.8.3"
+    }
+}
