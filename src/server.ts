@@ -1,8 +1,7 @@
-const f = async () => {
-    // console.log("asdf");
+export const start = async () => {
+  return {};
 };
 
-// tslint:disable:no-floating-promises
 (async () => {
-    await f();
-})();
+  await start();
+})().catch(console.error);

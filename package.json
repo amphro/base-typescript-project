@@ -1,36 +1,43 @@
 {
-    "name": "base-typescript-project",
-    "version": "1.0.0",
-    "description": "A starting point for new typescript projects.",
-    "main": "dist/server.js",
-    "scripts": {
-        "test": "mocha dist/test/**/*",
-        "compile": "./node_modules/tslint/bin/tslint -p . -c tslint.json 'src/**/*.ts' && tsc",
-        "precommit": "npm run compile && lint-staged"
-    },
-    "lint-staged": {
-        "**/*.{ts,js,css,md}": [
-            "prettier --write",
-            "git add"
-        ]
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/amphro/base-typescript-project.git"
-    },
-    "author": "Thomas Dvornik",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/amphro/base-typescript-project/issues"
-    },
-    "homepage": "https://github.com/amphro/base-typescript-project#readme",
-    "devDependencies": {
-        "@salesforce/dev-config": "1.1.0",
-        "@types/node": "8.10.11",
-        "husky": "0.14.3",
-        "lint-staged": "7.0.5",
-        "prettier": "1.12.1",
-        "tslint": "5.9.1",
-        "typescript": "2.8.3"
-    }
+  "name": "base-typescript-project",
+  "version": "2.0.0",
+  "description": "A starting point for new typescript projects.",
+  "main": "dist/server.js",
+  "scripts": {
+    "compile": "tsc",
+    "format": "prettier --write \"**/*[.js|.css|.ts|.json|.md]\"",
+    "lint": "eslint . --ext .ts",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amphro/base-typescript-project.git"
+  },
+  "author": "Thomas Dvornik",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amphro/base-typescript-project/issues"
+  },
+  "homepage": "https://github.com/amphro/base-typescript-project#readme",
+  "devDependencies": {
+    "@types/jest": "^26.0.21",
+    "@types/node": "^14.14.35",
+    "@typescript-eslint/eslint-plugin": "^4.19.0",
+    "@typescript-eslint/parser": "^4.19.0",
+    "eslint": "^7.22.0",
+    "jest": "^26.6.3",
+    "lint-staged": ">=10",
+    "prettier": "^2.2.1",
+    "simple-git-hooks": ">=2.0.3",
+    "ts-jest": "^26.5.4",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.3"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "*.ts": "eslint --cache --fix",
+    "*.{js,css,ts,md,json}": "prettier --write"
+  }
 }
