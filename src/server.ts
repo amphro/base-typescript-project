@@ -1,5 +1,5 @@
-export const start = async () => {
-  return {};
+export const start = async (): Promise<{ success: boolean }> => {
+  return { success: true };
 };
 
 (async () => {
