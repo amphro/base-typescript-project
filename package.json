@@ -1,6 +1,6 @@
 {
   "name": "base-typescript-project",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A starting point for new typescript projects.",
   "main": "dist/server.js",
   "scripts": {
@@ -20,18 +20,18 @@
   },
   "homepage": "https://github.com/amphro/base-typescript-project#readme",
   "devDependencies": {
-    "@types/jest": "^26.0.23",
-    "@types/node": "^15.14.0",
-    "@typescript-eslint/eslint-plugin": "^4.28.1",
-    "@typescript-eslint/parser": "^4.28.1",
-    "eslint": "^7.29.0",
-    "jest": "^27.0.6",
-    "lint-staged": ">=11.0.0",
-    "prettier": "^2.3.2",
-    "simple-git-hooks": ">=2.5.1",
-    "ts-jest": "^27.0.3",
-    "ts-node": "^10.0.0",
-    "typescript": "^4.3.5"
+    "@types/jest": "^28.1.6",
+    "@types/node": "^18.6.1",
+    "@typescript-eslint/eslint-plugin": "^5.31.0",
+    "@typescript-eslint/parser": "^5.31.0",
+    "eslint": "^8.20.0",
+    "jest": "^28.1.3",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "simple-git-hooks": "^2.8.0",
+    "ts-jest": "^28.0.7",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.7.4"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
